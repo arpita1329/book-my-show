@@ -45,8 +45,12 @@ const Plays = () => {
                   
                   <div className="lg:w-3/12 ">
                     <h2 className="text-2xl font-bold mb-4">Filters</h2>
-                    <div>
-                        <PlaysFilter />
+                    <div >
+                        <PlaysFilter title="Date" tags={["Today", "Tomorrow", "This Weekend"]} />
+                        <PlaysFilter title="Language" tags={["Tamil", "Telugu", "English"]} />
+                        <PlaysFilter title="Category" tags={["Theatre"]} />
+                        <PlaysFilter title="Genres" tags={["Drams", "Comedy", "Mythological", "Historical", "Online Streaming Plays"]} />
+                        <PlaysFilter title="More Filters" tags={["Online Streaming", "Kids Allowed"]} />
                     </div>
                   </div>
                 </div>
