@@ -4,7 +4,6 @@ import React from "react";
 import EntertainmentCardSlider from "../components/Entertainment/EntertainmentCard.component";
 import PosterSlider from "../components/PosterSlider/PosterSlider.component";
 
-
 // Config
 import TempPosters from "../config/TempPosters.config";
 
