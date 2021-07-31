@@ -16,8 +16,8 @@ export const PrevArrow = (props) => {
     return (
         <>
             <div
-                className={props.className}
-                style={{...props.style, backgroundColor: "black"}}
+                className={props.className} 
+                style={{...props.style, display: "block", backgroundColor: "black"}}
                 onClick={props.onClick}
             />
         </>

@@ -15,6 +15,9 @@ import TempPosters from "../config/TempPosters.config";
 // Context
 import { MovieContext } from "../context/movie.context";
 
+// Arrows
+import { NextArrow, PrevArrow } from "../components/HeroCarousal/Arrows.component";
+
 const Movie = () => {
     const {id} = useParams();
     const {movie} = useContext(MovieContext);
@@ -49,32 +52,36 @@ const Movie = () => {
 
     const settings = {
         infinite: false,
+        arrows: true,
         speed: 500,
-        slidesToShow: 4,
+        slidesToShow: 5,
         slidesToScroll: 4,
         initialSlide: 0,
+        nextArrow: <NextArrow />,
+        prevArrow: <PrevArrow />,
         responsive: [
           {
-            breakpoints: 1024,
+            breakpoint: 1024,
             settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3,
+                slidesToShow: 4,
+                slidesToScroll: 4,
                 infinite: true,
             },
           },
           {
-            breakpoints: 600,
+            breakpoint: 600,
             settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2,
+                slidesToShow: 3,
+                slidesToScroll: 3,
                 initialSlide: 2,
             },
           },
           {
-            breakpoints: 480,
+            breakpoint: 480,
             settings: {
                 slidesToShow: 3,
                 slidesToScroll: 1,
+                initialSlide: 3,
             },
           },
         ],
@@ -82,13 +89,16 @@ const Movie = () => {
 
     const settingsCast = {
         infinite: false,
+        arrows: true,
         speed: 500,
         slidesToShow: 6,
         slidesToScroll: 4,
-        initialSlide: 0,
+        initialSlide: 6,
+        nextArrow: <NextArrow />,
+        prevArrow: <PrevArrow />,
         responsive: [
           {
-            breakpoints: 1024,
+            breakpoint: 1024,
             settings: {
                 slidesToShow: 4,
                 slidesToScroll: 3,
@@ -96,7 +106,7 @@ const Movie = () => {
             },
           },
           {
-            breakpoints: 600,
+            breakpoint: 600,
             settings: {
                 slidesToShow: 5,
                 slidesToScroll: 2,
@@ -104,7 +114,7 @@ const Movie = () => {
             },
           },
           {
-            breakpoints: 480,
+            breakpoint: 480,
             settings: {
                 slidesToShow: 2,
                 slidesToScroll: 1,
